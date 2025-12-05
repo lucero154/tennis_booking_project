@@ -1,0 +1,19 @@
+
+{% extends "base.html" %}
+{% block title %}Canchas{% endblock %}
+{% block content %}
+<h2>Bienvenido a las canchas</h2>
+{% if message %}<p class="info">{{ message }}</p>{% endif %}
+<h3>Reservar turno</h3>
+<form method="post">
+  <label>Cancha:
+    <select name="court">
+      {% for c in courts %}<option value="{{ c }}">{{ c }}</option>{% endfor %}
+    </select>
+  </label><br>
+  <label>Fecha: <input name="date" type="date" required></label><br>
+  <label>Hora: <input name="time" type="time" required></label><br>
+  <button type="submit">Solicitar turno</button>
+</form>
+<p><a href="{{ url_for('logout') }}">Cerrar sesión</a></p>
+{% endblock %}

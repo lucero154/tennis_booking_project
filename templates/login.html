@@ -1,0 +1,11 @@
+
+{% extends "base.html" %}
+{% block title %}Ingreso{% endblock %}
+{% block content %}
+<h2>Ingreso</h2>
+<form method="post">
+  <label>Email: <input name="email" type="email" required></label><br>
+  <label>Password: <input name="password" type="password" required></label><br>
+  <button type="submit">Ingresar</button>
+</form>
+{% endblock %}
