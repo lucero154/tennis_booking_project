@@ -28,6 +28,9 @@ def init_db():
     conn.commit()
     conn.close()
 
+mensaje = "Hola desde mi rama lucero"
+
+
 app = Flask(__name__)
 app.secret_key = os.environ.get('FLASK_SECRET', 'devsecretkey')
 
